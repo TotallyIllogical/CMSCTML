@@ -1,0 +1,37 @@
+// My addition
+
+.panel{
+  padding-right: 140px;
+}
+
+.well{
+    h3{
+    color: darken(@mywell-color-bg, 40%);
+  }
+  a{
+    color: darken(@mywell-color-bg, 40%);
+    &:hover{
+      color: darken(@mywell-color-bg, 30%);
+    }
+  }
+}
+
+.btn.btn-primary{
+  #gradient > .vertical(lighten(@coral, 5%); @coral);
+}
+.btn.btn-default{
+  #gradient > .vertical(lighten(@coral, 5%); @coral);
+}
+
+.navbar{
+  #gradient > .vertical(@coral; @middlecoral );
+}
+
+body{
+  margin-top: 65px;
+  #gradient > .vertical(lighten(@graycoral, 15%); @lightcoral);
+}
+
+.footer{
+  margin-top: 20px;
+}
