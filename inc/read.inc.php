@@ -39,18 +39,3 @@ function getWords($menuid) {
 		}
 	return $words;
 }
-
-function getSidemenu1() {
-	global $db;
-	$sidemenu1 = array();
-	$sql = "SELECT * FROM sidemenu1";
-	$result = $db->query($sql);
-	while($row = $result->fetch(PDO::FETCH_ASSOC)) {
-		  $sidemenu1['items'][] = $row;
-}
-    foreach($sidemenu1['items'] as $key => $item) {
- 		   	$sidemenu1['items'][$key]['selected'] = TRUE;
-    		$sidemenu1['selectedId'] = $item['id'];
-    }    
-    return $sidemenu1;
-}

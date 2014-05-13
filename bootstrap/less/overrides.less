@@ -6,30 +6,30 @@
 
 .well{
     h3{
-    color: darken(@mywell-color-bg, 40%);
+    color: @sb-pill-text;
   }
   a{
-    color: darken(@mywell-color-bg, 40%);
+    color: @sb-pill-text;
     &:hover{
-      color: darken(@mywell-color-bg, 30%);
+      color: @sb-pill-text;
     }
   }
 }
 
 .btn.btn-primary{
-  #gradient > .vertical(lighten(@coral, 5%); @coral);
+  #gradient > .vertical(@btn-color-light; @btn-color-dark);
 }
 .btn.btn-default{
-  #gradient > .vertical(lighten(@coral, 5%); @coral);
+  #gradient > .vertical(@btn-color-light; @btn-color-dark);
 }
 
 .navbar{
-  #gradient > .vertical(@coral; @middlecoral );
+  #gradient > .vertical(@navbar-light; @navbar-dark );
 }
 
 body{
   margin-top: 65px;
-  #gradient > .vertical(lighten(@graycoral, 15%); @lightcoral);
+  #gradient > .vertical(@bg-light; @bg-dark);
 }
 
 .footer{

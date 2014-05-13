@@ -1,6 +1,6 @@
 <?php
 
-define("SITE_ROOT", "/my_site/");
+define("SITE_ROOT", "/");
 define("SITE_TITLE", "Title");
 define("DEFAULT_PAGE", "home");
 define("DB_CONSTRING", "mysql:host=localhost;dbname=dbname");

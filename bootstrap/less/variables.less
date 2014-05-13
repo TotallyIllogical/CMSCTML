@@ -9,8 +9,22 @@
 // 638BA2	566D7A	204E6A	94BAD1	A4C0D1
 
 // My Colors
+@navbar-dark: #80C8B4;
+@navbar-light: #B6E3D7;
+@navbar-text: #2A826A;
+@bg-light: #EDE9DD;
+@bg-dark: #F3E2B0;
+@sb-pill-text: #19774C;
+@sidebar: lighten(@sb-pill-text, 50%);
+@sb-pill-bg: lighten(@sb-pill-text, 55%);
+@heading-color: #6D5D9E;
+@mylink-color: #6A5D91;
+@btn-color-light: #B6E3D7;
+@btn-color-dark: #A6E3D3;
+
+
 @coral: #FFD096;
-@lightcoral: #FFE5C5;
+@lightcoral: #FFDFCD;
 @middlecoral: #FFDCB0;
 @graycoral: #BFA584;
 
@@ -19,8 +33,6 @@
 @navyblue: #204E6A;
 @grayblue: #566D7A;
 
-@mywell-color-bg: #FFDCB0;
-@mynavbar-color-bg: @coral;
 
 // Grays
 // -------------------------
@@ -34,8 +46,8 @@
 // Brand colors
 // -------------------------
 
-@brand-primary:         @blue;
-@brand-success:         #5cb85c;
+@brand-primary:         @btn-color-dark;
+@brand-success:         @navbar-dark;
 @brand-warning:         #f0ad4e;
 @brand-danger:          #d9534f;
 @brand-info:            #5bc0de;
@@ -43,13 +55,13 @@
 // Scaffolding
 // -------------------------
 
-@body-bg:               @lightcoral;
+@body-bg:               #B6E3D7;
 @text-color:            @gray-dark;
 
 // Links
 // -------------------------
 
-@link-color:            @navyblue;
+@link-color:            @mylink-color;
 @link-hover-color:      darken(@link-color, 5%);
 
 // Typography
@@ -77,7 +89,7 @@
 @headings-font-family:    @font-family-base;
 @headings-font-weight:    500;
 @headings-line-height:    1.1;
-@headings-color:          @blue;
+@headings-color:          @heading-color;
 
 
 // Iconography
@@ -283,12 +295,12 @@
 @navbar-padding-vertical:          ((@navbar-height - @line-height-computed) / 2);
 
 @navbar-default-color:             @coral;
-@navbar-default-bg:                @mynavbar-color-bg;
+@navbar-default-bg:                @navbar-dark;
 @navbar-default-border:            darken(@navbar-default-bg, 6.5%);
 
 // Navbar links
-@navbar-default-link-color:                darken(@mywell-color-bg, 40%);
-@navbar-default-link-hover-color:          darken(@mywell-color-bg, 30%);
+@navbar-default-link-color:                @navbar-text;
+@navbar-default-link-hover-color:          @navbar-text;
 @navbar-default-link-hover-bg:             lighten(@navbar-default-bg, 6.5%);
 @navbar-default-link-active-color:         #333;
 @navbar-default-link-active-bg:            darken(@navbar-default-bg, 6.5%);
@@ -337,7 +349,7 @@
 // -------------------------
 
 @nav-link-padding:                          10px 15px;
-@nav-link-hover-bg:                         darken(@mywell-color-bg, 5%);
+@nav-link-hover-bg:                         @sb-pill-bg;
 
 @nav-disabled-link-color:                   @gray-light;
 @nav-disabled-link-hover-color:             @gray-light;
@@ -358,8 +370,8 @@
 
 // Pills
 @nav-pills-border-radius:                   @border-radius-base;
-@nav-pills-active-link-hover-bg:            darken(@mywell-color-bg, 10%);
-@nav-pills-active-link-hover-color:         darken(@mywell-color-bg, 40%);
+@nav-pills-active-link-hover-bg:            @sb-pill-bg;
+@nav-pills-active-link-hover-color:         @sb-pill-text;
 
 
 // Pagination
@@ -565,7 +577,7 @@
 
 // Wells
 // -------------------------
-@well-bg:                     @mywell-color-bg;
+@well-bg:                     @sidebar;
 
 
 // Badges

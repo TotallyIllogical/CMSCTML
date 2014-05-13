@@ -28,7 +28,7 @@
           <div class="well">
             <h3>Mina andra sidor</h3>
             <ul class="nav nav-pills nav-stacked">
-              <li><a href="#">Blog (eng)</a></li>
+              <li><a href="http://blog.codetomylife.com">Blog (eng)</a></li>
               <li><a href="https://www.facebook.com/Eia.Andersson">Facebook</a></li>
               <li><a href="https://plus.google.com/u/0/+EiaAnderssonSkog/">Google+</a></li>
               <li><a href="https://github.com/guenhy">GitHub (eng)</a></li>
