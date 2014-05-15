@@ -1,7 +1,5 @@
 <?php
 
-//PDO-anslutning under variablen $db, gör den global
-
 global $db;
 
 try {

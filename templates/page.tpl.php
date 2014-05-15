@@ -28,20 +28,11 @@
           <div class="well">
             <h3>Mina andra sidor</h3>
             <ul class="nav nav-pills nav-stacked">
-              <li><a href="http://blog.codetomylife.com">Blog (eng)</a></li>
-              <li><a href="https://www.facebook.com/Eia.Andersson">Facebook</a></li>
-              <li><a href="https://plus.google.com/u/0/+EiaAnderssonSkog/">Google+</a></li>
-              <li><a href="https://github.com/guenhy">GitHub (eng)</a></li>
-              <li><a href="http://guenhykitten.deviantart.com/">DeviantArt (eng)</a></li>
-              
+              <?php getSidemenu1(); ?>
             </ul>
             <h3>Mina projekt</h3>
             <ul class="nav nav-pills nav-stacked">
-              <li><a href="#">Den Här sidan</a></li>
-              <li><a href="#">Ej Klar: Söksida (eng)</a></li>
-              <li><a href="#">Drupalshop</a></li>
-              <li><a href="#">Ej Klar: WP företagsida</a></li>
-              
+              <?php getSidemenu2(); ?>
             </ul>
           </div>
         </div>
