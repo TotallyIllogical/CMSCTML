@@ -1,4 +1,4 @@
 CMSCTML
 =======
 
-Simple CMS that connects to a datgabas for my personal site
+Simple CMS that connects to a databas for my personal site
