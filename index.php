@@ -9,7 +9,6 @@ routeDefault($path);
 $written = getDataFromPath($path);
 $menu = dressTemplate('menu', array('menu' => $written['menu']));
 $content ="";
-$sidemenu1 = array();
 foreach($written['words'] as $word){
 	$content .= dressTemplate('word', $word);
 }
