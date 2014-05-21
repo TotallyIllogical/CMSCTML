@@ -8,6 +8,7 @@
   <title><?php print($title); ?></title>
   <base href="<?php print($baseHref); ?>">
   <link href="bootstrap/css/bootstrap.css" rel="stylesheet">
+  <script src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/js/bootstrap.min.js"></script>
 </head>
 <body>
   <div>
