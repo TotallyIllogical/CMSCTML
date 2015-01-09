@@ -1,0 +1,30 @@
+//My variables
+$header-bg: #ff9763;
+$navbar-bg: #7a3aaf;
+$navbar-text: white;
+$navbar-active-bg: $header-bg;
+$navbar-active-text: $navbar-bg;
+
+// Bootstrap variable overrides
+$navbar-default-bg: $navbar-bg;
+$navbar-default-link-color: $navbar-text;
+$navbar-default-link-hover-color: $navbar-text;
+$navbar-default-link-hover-bg: lighten($navbar-default-bg, 10%);
+$navbar-default-link-active-color: $navbar-active-text;
+$navbar-default-link-active-bg: $navbar-active-bg;
+
+.my-nav-box {
+	background: url("../img/header_bg.png");
+	background-repeat: no-repeat;
+	background-color: $header-bg;
+	height: 200px;
+}
+#my-img {
+	padding: 7px;
+}
+.navbar {
+	margin: 0px !important;
+}
+.navbar-default {
+	border-radius: 0px !important;
+}

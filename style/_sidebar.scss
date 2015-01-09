@@ -1,0 +1,8 @@
+//My variables
+$sidebar-bg: #be89e1;
+$sidebar-link: darken($sidebar-bg, 50%);
+
+// Bootstrap variable overrides
+$well-bg: $sidebar-bg;
+$nav-link-hover-bg: lighten($sidebar-bg, 10%);
+$nav-pills-active-link-hover-color: $sidebar-link;

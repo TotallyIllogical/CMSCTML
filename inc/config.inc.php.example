@@ -1,8 +1,10 @@
 <?php
 
-define("SITE_ROOT", "/");
-define("SITE_TITLE", "Title");
-define("DEFAULT_PAGE", "home");
+// Write everything inside the quotation 
+
+define("SITE_ROOT", "/"); 
+define("SITE_TITLE", "yourtitle");
+define("DEFAULT_PAGE", "namethepage");
 define("DB_CONSTRING", "mysql:host=localhost;dbname=dbname");
 define("DB_USER", "username");
 define("DB_PASS", "password");

@@ -1,0 +1,15 @@
+//My variables
+$body-background: #ddc9df;
+$linkcolor: #7a3aaf;
+
+// Bootstrap variable overrides
+$body-bg: $body-background;
+$link-color: $linkcolor;
+
+body {
+	background-color: $body-bg !important;
+}
+.container {
+	max-width: 1000px;
+}
+
