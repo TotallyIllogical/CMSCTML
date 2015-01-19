@@ -25,7 +25,7 @@
 
                 <div class="col-sm-4">
                     <div class="well">
-                        <h3>Mina projekt</h3>
+                        <h3>Kontakta mig</h3>
                         <ul class="nav nav-pills nav-stacked">
                             <?php getSidemenu1(); ?>
                         </ul>
