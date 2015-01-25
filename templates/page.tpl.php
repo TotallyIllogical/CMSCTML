@@ -7,8 +7,9 @@
         <title><?php print($title); ?></title>
         <base href="<?php print($baseHref); ?>">
         <link href="style/style.css" rel="stylesheet">
-        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-        <script src="bootstrap/dist/js/bootstrap.min.js"></script>
+        <script src="//code.jquery.com/jquery-1.11.2.min.js"></script>
+        <script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+        <script src="style/bootstrap/assets/javascripts/bootstrap.min.js"></script>
     </head>
     <body>
         <div class="container">

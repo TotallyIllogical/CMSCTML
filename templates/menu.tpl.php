@@ -1,23 +1,18 @@
 <div class="my-nav-box">
-    <div class="container">
-        <div class="row">
-            <div class="col-sm-2">
-                <img src="img/header_image.png" id="my-img">
-            </div>
-            <div class="col-sm-10">
-                <img src="img/header_logo.png" id="my-logo">
-            </div>
-        </div>
+    <div class="container hidden-xs" id="my-container">
+        <img src="img/header_image.png" id="my-img">
+        <img src="img/header_logo.png" id="my-logo">
     </div>
     <nav class="navbar navbar-default" role="navigation">
         <div class="container-fluid">
             <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
                     <span class="sr-only">Toggle navigation</span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
+                <a class="navbar-brand visible-xs" href="#">Code To My Life</a>
             </div>
 
             <!-- Collect the nav links, forms, and other content for toggling -->

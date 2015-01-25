@@ -13,18 +13,55 @@ $navbar-default-link-hover-bg: lighten($navbar-default-bg, 10%);
 $navbar-default-link-active-color: $navbar-active-text;
 $navbar-default-link-active-bg: $navbar-active-bg;
 
+$navbar-default-toggle-hover-bg: lighten($navbar-bg, 10%);
+$navbar-default-toggle-icon-bar-bg: darken($navbar-bg, 50%);
+$navbar-default-toggle-border-color: black;
+
 .my-nav-box {
-	background: url("../img/header_bg.png");
-	background-repeat: no-repeat;
 	background-color: $header-bg;
-	height: 200px;
+	background-image: url("../img/header_bg.png");
+	background-repeat: no-repeat;
 }
+#my-container {
+	padding: 0;
+}
+
 #my-img {
-	padding: 7px;
+	position: relative;
+	padding: 7px 7px 5px 15px;
+	z-index: 2;
+	max-width: 100%;
+	height: auto;
 }
+#my-logo {
+	position: relative;
+	z-index: 2;
+	max-width: 100%;
+	height: auto;
+}
+
 .navbar {
 	margin: 0px !important;
 }
 .navbar-default {
 	border-radius: 0px !important;
+}
+.nav .navbar-nav{
+	li {
+		display: inline !important;
+	}
+}
+.navbar, .navbar-default  {
+	border: 0 !important;
+}
+
+.topmenu-selected {
+	background-color: $header-bg;
+	color:$navbar-active-text;
+	a {
+		color: $navbar-active-text !important;
+	}
+	a:hover {
+		color: $navbar-text !important;
+	}
 }

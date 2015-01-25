@@ -95,14 +95,10 @@ class Converter
             file = apply_mixin_parent_selector file, '\.(?:visible|hidden)'
           when 'variables.less'
             file = insert_default_vars(file)
-            file = unindent <<-SCSS + "\n" + file, 14
-              // When true, asset path helpers are used, otherwise the regular CSS `url()` is used.
-              // When there no function is defined, `fn('')` is parsed as string that equals the right hand side
-              // NB: in Sass 3.3 there is a native function: function-exists(twbs-font-path)
-              $bootstrap-sass-asset-helper: #{sass_fn_exists('twbs-font-path')} !default;
-            SCSS
+            file = ['$bootstrap-sass-asset-helper: false !default;', file].join("\n")
             file = replace_all file, %r{(\$icon-font-path): \s*"(.*)" (!default);}, "\n" + unindent(<<-SCSS, 14)
-              // [converter] Asset helpers such as Sprockets and Node.js Mincer do not resolve relative paths
+              // [converter] If $bootstrap-sass-asset-helper if used, provide path relative to the assets load path.
+              // [converter] This is because some asset helpers, such as Sprockets, do not work with file-relative paths.
               \\1: if($bootstrap-sass-asset-helper, "bootstrap/", "\\2bootstrap/") \\3;
             SCSS
           when 'close.less'
@@ -114,6 +110,9 @@ class Converter
           when 'forms.less'
             file = extract_nested_rule file, 'textarea&'
             file = apply_mixin_parent_selector(file, '\.input-(?:sm|lg)')
+            file = replace_rules file, /\.form-group-(?:sm|lg)/ do |rule|
+              apply_mixin_parent_selector rule, '.form-control'
+            end
           when 'navbar.less'
             file = replace_all file, /(\s*)\.navbar-(right|left)\s*\{\s*@extend\s*\.pull-(right|left);\s*/, "\\1.navbar-\\2 {\\1  float: \\2 !important;\\1"
           when 'tables.less'
@@ -146,7 +145,7 @@ class Converter
       # generate variables template
       save_file 'templates/project/_bootstrap-variables.sass',
                 "// Override Bootstrap variables here (defaults from bootstrap-sass v#{Bootstrap::VERSION}):\n\n" +
-                    File.read("#{save_to}/_variables.scss").gsub(/^(?=\$)/, '// ').gsub(/ !default;/, '')
+                    File.read("#{save_to}/_variables.scss").lines[1..-1].join.gsub(/^(?=\$)/, '// ').gsub(/ !default;/, '')
     end
 
     def bootstrap_less_files
@@ -171,6 +170,7 @@ class Converter
       file   = deinterpolate_vararg_mixins(file)
       file   = replace_calculation_semantics(file)
       file   = replace_file_imports(file)
+      file   = unquote_utf8_escape_sequences(file)
       file
     end
 
@@ -206,7 +206,7 @@ class Converter
 SASS
     end
 
-    # convert grid mixins LESS when => SASS @if
+    # convert grid mixins LESS when => Sass @if
     def convert_grid_mixins(file)
       file = replace_rules file, /@mixin make-grid-columns/, comments: false do |css, pos|
         mixin_all_grid_columns css, selector: '.col-xs-#{$i}, .col-sm-#{$i}, .col-md-#{$i}, .col-lg-#{$i}', to: '$grid-columns'
@@ -263,8 +263,8 @@ SASS
 
     # margin: a -b
     # LESS: sets 2 values
-    # SASS: sets 1 value (a-b)
-    # This wraps a and -b so they evaluates to 2 values in SASS
+    # Sass: sets 1 value (a-b)
+    # This wraps a and -b so they evaluates to 2 values in Sass
     def replace_calculation_semantics(file)
       # split_prop_val.call('(@navbar-padding-vertical / 2) -@navbar-padding-horizontal')
       # #=> ["(navbar-padding-vertical / 2)", "-navbar-padding-horizontal"]
@@ -313,6 +313,12 @@ SASS
     def replace_file_imports(less, target_path = '')
       less.gsub %r([@\$]import ["|']([\w\-/]+).less["|'];),
                 %Q(@import "#{target_path}\\1";)
+    end
+
+    # Unquote escape sequences, e.g. content: "#{$sep}\00a0" to content: #{$sep}\00a0
+    # Works around Sass 3.4 issue: https://github.com/sass/sass/issues/1395
+    def unquote_utf8_escape_sequences(scss)
+      scss.gsub /\"((?:#\{[^}]+\})?\\[a-f0-9]{4,}?)\"/, '\1'
     end
 
     def replace_all(file, regex, replacement = nil, &block)
@@ -384,8 +390,10 @@ SASS
         end
         # unwrap, and replace @include
         unindent unwrap_rule_block(rule).gsub(/(@include [\w-]+)\(?([\$\w\-,\s]*)\)?/) {
-          args = $2
-          "#{cmt}#{$1}('#{sel.gsub(/\s+/, ' ')}'#{', ' if args && !args.empty?}#{args})"
+          name, args = $1, $2
+          sel.gsub(/\s+/, ' ').split(/,\s*/ ).map { |sel_part|
+            "#{cmt}#{name}('#{sel_part}'#{', ' if args && !args.empty?}#{args})"
+          }.join(";\n")
         }
       end
     end
@@ -449,7 +457,7 @@ SASS
       end
     end
 
-    # change Microsoft filters to SASS calling convention
+    # change Microsoft filters to Sass calling convention
     def replace_ms_filters(file)
       log_transform
       file.gsub(
@@ -497,7 +505,7 @@ SASS
     end
 
     def replace_escaping(less)
-      less = less.gsub(/~"([^"]+)"/, '#{\1}') # Get rid of ~"" escape
+      less = less.gsub(/~"([^"]+)"/, '\1').gsub(/~'([^']+)'/, '\1') # Get rid of ~"" escape
       less.gsub!(/\$\{([^}]+)\}/, '$\1') # Get rid of @{} escape
       less.gsub!(/"([^"\n]*)(\$[\w\-]+)([^"\n]*)"/, '"\1#{\2}\3"') # interpolate variable in string, e.g. url("$file-1x") => url("#{$file-1x}")
       less.gsub(/(\W)e\(%\("?([^"]*)"?\)\)/, '\1\2') # Get rid of e(%("")) escape
