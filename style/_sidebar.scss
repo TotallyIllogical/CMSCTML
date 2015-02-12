@@ -6,3 +6,9 @@ $sidebar-link: darken($sidebar-bg, 50%);
 $well-bg: $sidebar-bg;
 $nav-link-hover-bg: lighten($sidebar-bg, 10%);
 $nav-pills-active-link-hover-color: $sidebar-link;
+
+.well { 
+	h1,h2,h3,h4,h5,h6 {
+		color: white;
+	}
+}

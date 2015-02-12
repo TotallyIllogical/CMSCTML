@@ -32,7 +32,7 @@
                     <?php print($content); ?>
                 </div>
 
-                <div class="col-sm-4">
+                <div class="col-sm-3 col-sm-offset-1">
                     <div class="well">
                         <h3>Kontakta mig</h3>
                         <ul class="nav nav-pills nav-stacked">

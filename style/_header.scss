@@ -47,8 +47,12 @@ $navbar-default-toggle-border-color: black;
 	border-radius: 0px !important;
 }
 .nav .navbar-nav{
+	a {
+		text-transform: uppercase;
+	}
 	li {
 		display: inline !important;
+		text-transform: uppercase;
 	}
 }
 .navbar, .navbar-default  {
