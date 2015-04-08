@@ -1,0 +1,45 @@
+.slider-bigbox {
+	position: relative;
+	.big-image {
+		width: 100%;
+	}
+	.desc {
+		// position: absolute;
+		width: 100%;
+		// display: none;
+		a {
+			&:hover{
+            color: black;
+            text-decoration: none;
+	        }
+	        &.collapse {
+	            text-indent: -99999px;
+	            position: absolute;
+	            top: -27px;
+	            right: 20px;
+	        }
+	        &.show {
+	            background-position: left bottom;
+	        }
+		}
+		.big-text {
+			padding: 10px;
+			width: 100%;
+			background-color: #111;
+			border: 1px solid black;
+			text-align: center;
+		}
+	}
+	
+}
+.slider-smallbox {
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+	.small-image {
+		display: none;
+	}
+	.small-text {
+		display: none;
+	}
+}

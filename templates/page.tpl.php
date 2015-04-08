@@ -28,26 +28,31 @@
             </div>
 
             <div class="content row">
-                <div class="col-sm-8">
-                    <?php print($content); ?>
-                </div>
+                 <div class="col-sm-8 lotoftext">
+                        <?php print($content); ?> 
 
-                <div class="col-sm-3 col-sm-offset-1">
-                    <div class="well">
-                        <h3>Kontakta mig</h3>
-                        <ul class="nav nav-pills nav-stacked">
-                            <?php getSidemenu1(); ?>
-                        </ul>
+                        
+
+                    </div>
+                    <div class="col-sm-3 col-sm-offset-1">
+                        <div class="well">
+                            <h3>Kontakt</h3>
+                            <ul class="nav nav-pills nav-stacked">
+                                <?php print($sidemenu); ?>
+                            </ul>
+                        </div>
+                    </div>
+
+            </div>
+            <div class="content row">
+                <div class="footer">
+                    <div class="col-sm-12">
+                        <?php print($footer); ?>
                     </div>
                 </div>
             </div>
-            <div class="row">
-                <div class="footer">
-                    <?php print($footer); ?>
-                </div>
-            </div>
 
-        </div><!-- huvudinnehåll -->
+        </div><!-- container -->
 
 
           

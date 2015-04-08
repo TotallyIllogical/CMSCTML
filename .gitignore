@@ -1,6 +1,9 @@
 inc/config.inc.php
 img/
+file/
 .sass-cache/
 config.rb
 cmsctml.sublime-project
 cmsctml.sublime-workspace
+node_modules
+npm-debug.log

@@ -1,0 +1,75 @@
+// Header
+.my-nav-box {
+	background-color: $header-bg;
+}
+#my-container {
+	padding: 0;
+}
+
+.navbar {
+	margin: 0px !important;
+}
+.navbar-default {
+	border-radius: 0px !important;
+}
+.nav .navbar-nav{
+	li {
+		display: inline !important;
+	}
+}
+.navbar, .navbar-default  {
+	border: 0 !important;
+	text-transform: uppercase;
+	font-family: "Ubuntu", "Times New Roman", Times, serif;
+}
+
+.topmenu-selected {
+	background-color: $header-bg;
+	color:$navbar-active-text;
+	a {
+		color: $navbar-active-text !important;
+	}
+	a:hover {
+		color: $navbar-text !important;
+	}
+}
+
+// Content
+.content {
+	padding-top: 20px;
+	background-color: white;
+}
+h1.toptitle {
+	margin-top: 0px;
+}
+html {
+	font-size: 16px;
+}
+body {
+	background-color: $body-bg !important;
+	font-size: 16px;
+}
+.container {
+	max-width: 1000px;
+}
+a {
+	font-weight: bold;
+}
+p {
+	font-size: 16px;
+}
+.lotoftext {
+	line-height: 1.6;
+	p {
+		margin-bottom: 15px;
+	}
+}
+
+// Sidebar
+
+
+// Footer
+.footer {
+	background-color: white;
+}
+

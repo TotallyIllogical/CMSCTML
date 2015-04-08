@@ -35,7 +35,19 @@ function getWords($menuid) {
         		WHERE menuxtext.m_id = $menuid";
         $result = $db->query($sql);
 		while($row = $result->fetch(PDO::FETCH_ASSOC)) {
-		$words[] = $row;
+		$text[] = $row;
 		}
-	return $words;
+	return $text;
 }
+
+function getSidemenu() {
+	global $db;
+	$sidemenu = array();
+	$sql = "SELECT * FROM sidemenu1";
+	$result = $db->query($sql);
+    while($row = $result->fetch(PDO::FETCH_ASSOC)) {
+        $sidemenu[] = '<li><a href="' . $row['link'] . '">' . $row['text'] . '</a></li>';
+    }
+    return $sidemenu;
+}
+

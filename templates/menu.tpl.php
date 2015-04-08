@@ -1,7 +1,6 @@
 <div class="my-nav-box">
-    <div class="container hidden-xs" id="my-container">
-        <img src="img/header_image.png" id="my-img">
-        <img src="img/header_logo.png" id="my-logo">
+    <div class="container" id="my-container">
+        <img src="img/header_logo.png" class="img-responsive">
     </div>
     <nav class="navbar navbar-default" role="navigation">
         <div class="container-fluid">

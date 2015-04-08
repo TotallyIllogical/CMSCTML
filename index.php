@@ -12,12 +12,15 @@ $content ="";
 foreach($written['words'] as $word){
 	$content .= dressTemplate('word', $word);
 }
+$sidemenucontent = getSidemenu();
+$sidemenu = implode('', $sidemenucontent);
 
 $page = dressTemplate('page', array(
 									'title' => SITE_TITLE, 
 									'baseHref'=> SITE_ROOT, 
 									'menu' => $menu, 
 									'content' => $content, 
+									'sidemenu' => $sidemenu,
 									'footer' => '<small><em>Skapad av: Emma "Eia" Andersson</em></small>'));
 respond($page);
 

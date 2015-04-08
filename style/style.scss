@@ -1,5 +1,4 @@
-@import "basic";
-@import "header";
-@import "content";
-@import "sidebar";
+@import "variables";
+@import "override";
+@import "slider";
 @import "bootstrap/assets/stylesheets/bootstrap.scss";
