@@ -18,6 +18,7 @@
         <script src="//code.jquery.com/jquery-1.11.2.min.js"></script>
         <script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
         <script src="style/bootstrap/assets/javascripts/bootstrap.min.js"></script>
+        <script src="script/script.js"></script>
     </head>
     <body>
         <div class="container">
@@ -26,35 +27,30 @@
                     <?php print($menu); ?>
                 </div>
             </div>
-
             <div class="content row">
-                 <div class="col-sm-8 lotoftext">
-                        <?php print($content); ?> 
-
-                        
-
-                    </div>
-                    <div class="col-sm-3 col-sm-offset-1">
-                        <div class="well">
-                            <h3>Kontakt</h3>
-                            <ul class="nav nav-pills nav-stacked">
-                                <?php print($sidemenu); ?>
-                            </ul>
-                        </div>
-                    </div>
-
-            </div>
-            <div class="content row">
-                <div class="footer">
-                    <div class="col-sm-12">
-                        <?php print($footer); ?>
+                <div class="col-sm-8 lotoftext">
+                    <?php print($content); ?> 
+                </div>
+            
+                <div class="col-sm-3 col-sm-offset-1">
+                    <div class="well">
+                        <h3>Kontakt</h3>
+                        <ul class="nav nav-pills nav-stacked">
+                            <?php print($sidemenu); ?>
+                        </ul>
                     </div>
                 </div>
-            </div>
 
+                <div class="row">
+                    <div class="footer">
+                        <div class="col-sm-12">
+                            <?php print($footer); ?>
+                        </div>
+                    </div>
+                </div>
+
+            </div><!-- content row -->
         </div><!-- container -->
-
-
-          
+      
     </body>
 </html>

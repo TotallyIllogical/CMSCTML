@@ -1,45 +1,53 @@
 .slider-bigbox {
 	position: relative;
-	.big-image {
+	#big-image {
 		width: 100%;
 	}
 	.desc {
-		// position: absolute;
+		position: absolute;
 		width: 100%;
-		// display: none;
+		display: none;
+		bottom: 0;
+		left: 0;
 		a {
 			&:hover{
-            color: black;
+            color: lighten($linkcolor, 15%);
             text-decoration: none;
 	        }
 	        &.collapse {
-	            text-indent: -99999px;
 	            position: absolute;
-	            top: -27px;
-	            right: 20px;
 	        }
 	        &.show {
 	            background-position: left bottom;
 	        }
 		}
-		.big-text {
+		#big-text {
 			padding: 10px;
 			width: 100%;
 			background-color: #111;
 			border: 1px solid black;
 			text-align: center;
+			color: white;
+			.darker {
+				color: #555;
+				font-weight: bold;
+				text-decoration: line-through;
+
+			}
 		}
 	}
 	
 }
 .slider-smallbox {
 	margin: 0;
-	padding: 0;
-	list-style-type: none;
-	.small-image {
-		display: none;
-	}
-	.small-text {
-		display: none;
+	padding: 0; 
+	.smallbox{
+		border: solid 1px white;
+		&:hover{
+			border: solid 1px $linkcolor;
+		}
+		.small-text {
+			display: none;
+		}
 	}
 }

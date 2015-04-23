@@ -18,6 +18,14 @@ module.exports = function(grunt) {
                 }
             }
         },
+        jshint: {
+          options: {
+            jshintrc: true
+          },
+          all: [
+            'script/*.js'
+          ]
+        },
         watch: {
             sass: {
                 files: 'style/*.scss',
@@ -25,12 +33,20 @@ module.exports = function(grunt) {
                 option: {
                     livereload: true,
                 }
+            },
+            js: {
+                files: [
+                  '<%= jshint.all %>'
+                ],
+                tasks: ['jshint']
             }
+
         }
 
     });
 
     grunt.loadNpmTasks('grunt-contrib-sass');
+    grunt.loadNpmTasks('grunt-contrib-jshint');
     grunt.loadNpmTasks('grunt-contrib-watch');
 
 };

@@ -1,40 +1,35 @@
-/*var intervalId;
-var slidetime = 2500; //milliseconds between slides
+
 
 $( document ).ready( function() {
 
-	instervalID = setInterval( cycleImage , slidetime );
-
 	$( ".slider-bigbox .desc" ).show();
-	$( ".slider-bigbox .desc .big-text" ).animate( { opacity: 0.85 }, 1 );
+	$( "#big-text" ).animate( { opacity: 0.85 }, 1 );
 
-	$( ".small-box" li:first ).addClass( 'active' );
+	$( ".slider-smallbox .smallbox:first" ).addClass( 'active' );
 
 	$( "a.collapse" ).click( function() {
-		$( ".slider-bigbox .desc .big-text" ).slideToggle();
+		$( "#big-text" ).slideToggle();
 		$( "a.collapse" ).toggleClass( "show" );
 	});
-	function cycleImage() {
-		var onLastLi = $( ".small-box li:last" ).hasClass( "active" );
-		var currentImg = $( ".small-box li.active" );
 
-		if ( onLastLi ) {
-			var nextImg = $( ".small-box li:first");
+	$( ".slider-smallbox .smallbox" ).click( function (){
+		var imageSrc = $( this ).find( 'img' ).attr( "src" );
+		var imageText = $( this ).find( '.small-text' ).html();
+		console.log(imageText);
+
+		if( $( this ).hasClass( "active" ) ) {
+			return false;
+		} else {
+			$( ".slider-bigbox" ).animate( { opacity: 0.3 }, 250, function() {
+				$( "#big-image" ).attr( { src: imageSrc } );
+				$( "#big-text").html( imageText ).animate( { opacity: 0.85 }, 250 );
+				$( ".slider-bigbox" ).animate( { opacity: 1 }, 250 );
+			});
 		}
-		else {
-			var nextImg = $( ".small-box li.active" ).next();
-		}
-		$( currentImg ).removeClass( "active" );
-		$( nextImg ).addClass( "active" );
+		$( ".slider-smallbox .smallbox" ).removeClass( 'active' );
+		$( this ).addClass( 'active' );
 
-		var imgSrc = $( nextImage ).find( 'img' ).attr( "src" );
-		var imgText = $( nextImage ).find( ".small-text" ).html();
 
-		$( ".slider-bigbox .desc .big-text" ).animate( { opacity: 0 }, 250, function {
-			$( ".slider-bigbox .desc .big-text" ).html( imgText ).animate( { opacity: 0.85, margonBottom: "0" }, 250 );
-			$( ".slider-bigbox .big-image" ).attr( { src: imgSrc } );
-		});
-	};
+	});
 
-});*/
-
+});
