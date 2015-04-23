@@ -42,11 +42,11 @@
                 </div>
 
                 <div class="row">
-                    <div class="footer">
-                        <div class="col-sm-12">
+                    <div class="footer col-sm-12">
+                        
                             <?php print($footer); ?>
                         </div>
-                    </div>
+                    
                 </div>
 
             </div><!-- content row -->
