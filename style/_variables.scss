@@ -1,6 +1,3 @@
-@import url(http://fonts.googleapis.com/css?family=Ubuntu);
-@import url(http://fonts.googleapis.com/css?family=Lora);
-
 //My variables
 $header-bg: #ff9763;
 $navbar-bg: #7A4BAC;
@@ -15,6 +12,13 @@ $sidebar-bg: white;
 $sidebar-hover-link: white;
 $sidebar-hover-bg: #B393D6;
 $sidebar-border: #A77BD6;
+
+@font-face {
+	font-family: "Lora";
+	src: ( "fonts/Lora-Regular.ttf" ); 
+	font-family: "Ubuntu";
+	src: ( "fonts/Ubuntu-Regular.ttf" ); 
+}
 
 // Bootstrap variable overrides
 $navbar-default-bg: $navbar-bg;
@@ -31,6 +35,8 @@ $navbar-default-toggle-border-color: black;
 $body-bg: $body-background;
 $link-color: $linkcolor;
 $font-size-base: 16px;
+$bootstrap-sass-asset-helper: false;
+$icon-font-path: if($bootstrap-sass-asset-helper, "bootstrap/", "../fonts/");
 $font-family-sans-serif: "Lora", Helvetica, Arial, sans-serif;
 $font-family-serif: "Ubuntu", "Times New Roman", Times, serif;
 $headings-font-family: $font-family-serif; 
