@@ -14,17 +14,19 @@ module.exports = function(grunt) {
                     sourcemap: false
                 },
                 files: {
-                   'style/style.css': [ 'style/style.scss' ]
+                   'style/style.css' : 'style/style.scss' 
                 }
             }
         },
         jshint: {
-          options: {
-            jshintrc: true
-          },
-          all: [
-            'script/*.js'
-          ]
+             all: [ 'script/slider.js' ],
+        },
+        uglify: {
+            my_target: {
+                files: {
+                    'script/script.min.js': ['script/slider.js', 'script/bootstrap.min.js']
+                }
+            }
         },
         watch: {
             sass: {
@@ -38,15 +40,15 @@ module.exports = function(grunt) {
                 files: [
                   '<%= jshint.all %>'
                 ],
-                tasks: ['jshint']
-            }
-
+                tasks: ['jshint', 'uglify']
+            },
         }
 
     });
 
     grunt.loadNpmTasks('grunt-contrib-sass');
     grunt.loadNpmTasks('grunt-contrib-jshint');
+    grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.loadNpmTasks('grunt-contrib-watch');
 
 };
