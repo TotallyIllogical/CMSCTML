@@ -42,7 +42,12 @@
 	margin: 0;
 	padding: 0; 
 	.smallbox{
-		border: solid 1px white;
+		@media ( min-width: $screen-xs ){
+			border: solid 1px white;
+		}
+		@media ( max-width: $screen-xs ){
+			border: solid 1px lightgray;
+		}
 		&:hover{
 			border: solid 1px $linkcolor;
 		}

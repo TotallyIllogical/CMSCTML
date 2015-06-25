@@ -1,3 +1,4 @@
+@import "bootstrap/variables";
 //My variables
 $header-bg: #ff9763;
 $navbar-bg: #7A4BAC;
@@ -35,8 +36,7 @@ $navbar-default-toggle-border-color: black;
 $body-bg: $body-background;
 $link-color: $linkcolor;
 $font-size-base: 16px;
-$bootstrap-sass-asset-helper: false;
-$icon-font-path: if($bootstrap-sass-asset-helper, "bootstrap/", "/fonts/");
+$icon-font-path: if($bootstrap-sass-asset-helper, "bootstrap/", "../fonts/");
 $font-family-sans-serif: "Lora", Helvetica, Arial, sans-serif;
 $font-family-serif: "Ubuntu", "Times New Roman", Times, serif;
 $headings-font-family: $font-family-serif; 

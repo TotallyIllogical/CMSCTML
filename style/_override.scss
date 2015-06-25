@@ -59,6 +59,9 @@ p {
 	font-size: 16px;
 }
 .lotoftext {
+	@media ( max-width: $screen-xs ){
+		padding-bottom: 25px;
+	}
 	line-height: 1.6;
 	p {
 		margin-bottom: 15px;
@@ -70,10 +73,6 @@ p {
 
 // Footer
 .footer {
-	// background-color: white;
 	padding: 25px 15px 20px;
-	small {
-		padding-left: 15px;
-	}
 }
 
