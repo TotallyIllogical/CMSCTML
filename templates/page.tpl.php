@@ -25,7 +25,7 @@
                     <?php print($menu); ?>
                 </div>
             </div>
-            <div class="content row">
+            <div class="row content">
                 <div class="col-sm-8 lotoftext">
                     <?php print($content); ?> 
                 </div>
@@ -38,12 +38,9 @@
                         </ul>
                     </div>
                 </div>
-
-                <div class="row">
-                    <div class="footer col-sm-12">
+                <div class="footer col-sm-12">
                     <hr>
-                        <?php print($footer); ?>
-                    </div>
+                    <?php print($footer); ?>
                 </div>
             </div><!-- content row -->
         </div><!-- container -->
