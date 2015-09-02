@@ -1,22 +1,22 @@
 @import "bootstrap/variables";
 //My variables
-$header-bg: #ff9763;
-$navbar-bg: #7A4BAC;
+$header-bg: #000;
+$navbar-bg: #6c6ea0;
 $navbar-text: white;
 $navbar-active-bg: $header-bg;
 $navbar-active-text: $navbar-bg;
 
-$body-background: #ddc9df;
-$linkcolor: #7A4BAC;
+$body-background: #beb2ce;
+$linkcolor: #2cbda1;
 
 $sidebar-bg: white;
 $sidebar-hover-link: white;
 $sidebar-hover-bg: #B393D6;
 $sidebar-border: #A77BD6;
 
+$footer-bg: #c7c8db;
+
 @font-face {
-	font-family: "Lora";
-	src: ( "fonts/Lora-Regular.ttf" ); 
 	font-family: "Ubuntu";
 	src: ( "fonts/Ubuntu-Regular.ttf" ); 
 }
@@ -25,7 +25,7 @@ $sidebar-border: #A77BD6;
 $navbar-default-bg: $navbar-bg;
 $navbar-default-link-color: $navbar-text;
 $navbar-default-link-hover-color: $navbar-text;
-$navbar-default-link-hover-bg: lighten($navbar-default-bg, 10%);
+$navbar-default-link-hover-bg: darken($navbar-default-bg, 10%);
 $navbar-default-link-active-color: $navbar-active-text;
 $navbar-default-link-active-bg: $navbar-active-bg;
 
@@ -35,9 +35,9 @@ $navbar-default-toggle-border-color: black;
 
 $body-bg: $body-background;
 $link-color: $linkcolor;
+$link-hover-color: darken($link-color, 15%);
 $font-size-base: 16px;
 $icon-font-path: if($bootstrap-sass-asset-helper, "bootstrap/", "../fonts/");
-$font-family-sans-serif: "Lora", Helvetica, Arial, sans-serif;
 $font-family-serif: "Ubuntu", "Times New Roman", Times, serif;
 $headings-font-family: $font-family-serif; 
 

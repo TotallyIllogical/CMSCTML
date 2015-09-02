@@ -59,10 +59,12 @@ p {
 	font-size: 16px;
 }
 .lotoftext {
+	padding-left: 30px;
+	line-height: 1.6;
+	max-width: 636.656px;
 	@media ( max-width: $screen-xs ){
 		padding-bottom: 25px;
 	}
-	line-height: 1.6;
 	p {
 		margin-bottom: 15px;
 	}
@@ -73,6 +75,18 @@ p {
 
 // Footer
 .footer {
+	background-color: $footer-bg;
 	padding: 25px 15px 20px;
+	font-size: 36px;
+	color: white;
+	i {
+		padding-right: 25px;
+	}
+	a {
+		color: white;
+		&:hover {
+			color: $linkcolor;
+		}
+	}
 }
 

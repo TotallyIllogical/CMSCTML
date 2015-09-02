@@ -26,23 +26,15 @@
                 </div>
             </div>
             <div class="row content">
-                <div class="col-sm-8 lotoftext">
+                <div class="col-sm-12 lotoftext">
                     <?php print($content); ?> 
                 </div>
-                
-                <div class="col-sm-3 col-sm-offset-1">
-                    <div class="well">
-                        <h3>Kontakt</h3>
-                        <ul class="nav nav-pills nav-stacked">
-                            <?php print($sidemenu); ?>
-                        </ul>
-                    </div>
-                </div>
-                <div class="footer col-sm-12">
-                    <hr>
+            </div><!-- content row -->
+            <div class="footer row">
+                <div class="col-sm-12">
                     <?php print($footer); ?>
                 </div>
-            </div><!-- content row -->
+            </div><!-- footer row -->
         </div><!-- container -->
 
     </body>

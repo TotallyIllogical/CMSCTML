@@ -40,13 +40,13 @@ function getWords($menuid) {
 	return $text;
 }
 
-function getSidemenu() {
+function getSociallinks() {
 	global $db;
 	$sidemenu = array();
-	$sql = "SELECT * FROM sidemenu1";
+	$sql = "SELECT * FROM sociallinks";
 	$result = $db->query($sql);
     while($row = $result->fetch(PDO::FETCH_ASSOC)) {
-        $sidemenu[] = '<li><a href="' . $row['link'] . '">' . $row['text'] . '</a></li>';
+        $sidemenu[] = '<a href="' . $row['link'] . '"><i class="' . $row['img'] . '"></i></a>';
     }
     return $sidemenu;
 }
