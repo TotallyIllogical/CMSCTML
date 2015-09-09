@@ -24,15 +24,18 @@ $footer-bg: #c7c8db;
 
 // Bootstrap variable overrides
 $navbar-default-bg: $navbar-bg;
+$navbar-default-color: $navbar-text;
 $navbar-default-link-color: $navbar-text;
 $navbar-default-link-hover-color: $navbar-text;
 $navbar-default-link-hover-bg: darken($navbar-default-bg, 10%);
 $navbar-default-link-active-color: $navbar-active-text;
 $navbar-default-link-active-bg: $navbar-active-bg;
 
+
 $navbar-default-brand-color: $navbar-text;
 $navbar-default-brand-hover-color: $navbar-text;
 
+$navbar-default-toggle-border-color: $navbar-text;
 $navbar-default-toggle-hover-bg: lighten($navbar-bg, 10%);
 $navbar-default-toggle-icon-bar-bg: darken($navbar-bg, 50%);
 $navbar-default-toggle-border-color: black;
