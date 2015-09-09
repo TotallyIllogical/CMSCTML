@@ -29,6 +29,7 @@ p.navbar-brand {
 }
 h1.toptitle {
 	margin-top: 0px;
+	text-transform: uppercase;
 }
 html {
 	font-size: 16px;
@@ -49,7 +50,7 @@ p {
 .lotoftext {
 	padding-left: 30px;
 	line-height: 1.6;
-	max-width: 636.656px;
+	max-width: 636px;
 	@media ( max-width: $screen-xs ){
 		padding-bottom: 25px;
 	}
@@ -57,14 +58,15 @@ p {
 		margin-bottom: 15px;
 	}
 }
-
-// Sidebar
-
-
+.my-btn {
+	color: white;
+	background-color: $linkcolor;
+	border-radius: 0;
+}
 // Footer
 .footer {
 	min-height: 150px;
-	background-image: url("img/binarey.png");
+	// background-image: $footer-img;
 	background-color: $footer-bg;
 	padding-top: 40px;
 	font-size: 36px;
