@@ -62,11 +62,12 @@ p {
 .lotoftext {
 	padding-left: 30px;
 	line-height: 1.6;
-	max-width: 636px;
+	
 	@media ( max-width: $screen-xs ){
 		padding-bottom: 25px;
 	}
 	p {
+		max-width: 636px;
 		margin-bottom: 15px;
 	}
 }
