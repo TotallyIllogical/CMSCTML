@@ -6,7 +6,7 @@ $navbar-text: white;
 $navbar-active-bg: $header-bg;
 $navbar-active-text: $navbar-bg;
 
-$body-background: #beb2ce;
+$body-background: white;
 $linkcolor: #2cbda1;
 
 $sidebar-bg: white;
@@ -28,6 +28,9 @@ $navbar-default-link-hover-color: $navbar-text;
 $navbar-default-link-hover-bg: darken($navbar-default-bg, 10%);
 $navbar-default-link-active-color: $navbar-active-text;
 $navbar-default-link-active-bg: $navbar-active-bg;
+
+$navbar-default-brand-color: $navbar-text;
+$navbar-default-brand-hover-color: $navbar-text;
 
 $navbar-default-toggle-hover-bg: lighten($navbar-bg, 10%);
 $navbar-default-toggle-icon-bar-bg: darken($navbar-bg, 50%);

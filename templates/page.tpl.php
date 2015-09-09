@@ -19,23 +19,26 @@
         <script src="script/script.min.js"></script>
     </head>
     <body>
-        <div class="container">
+        <div class="header">
+            <?php print($menu); ?>
+        </div>
+
+        <div class="container content">
             <div class="row">
-                <div class="header">
-                    <?php print($menu); ?>
-                </div>
-            </div>
-            <div class="row content">
-                <div class="col-sm-12 lotoftext">
                     <?php print($content); ?> 
-                </div>
-            </div><!-- content row -->
-            <div class="footer row">
-                <div class="col-sm-12">
-                    <?php print($footer); ?>
-                </div>
-            </div><!-- footer row -->
-        </div><!-- container -->
+            </div><!--row -->
+        </div>><!-- container -->
+
+        <div class="footer navbar-fixed-bottom">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-12 footer-text">
+                        <?php print($footer); ?>
+                    </div>
+                </div><!-- row -->
+            </div><!-- container -->
+        </div>
+
 
     </body>
 </html>
