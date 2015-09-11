@@ -53,6 +53,11 @@
 	}
 }
 @media (max-width: $screen-sm) {
-	.slider-smallbox {
+	.small-image {
+		padding-top: 25px;
+	}
+	.small-text {
+		padding-bottom: 40px;
+		border-bottom: solid 1px lightgray;
 	}
 }
