@@ -36,23 +36,23 @@
 			}
 		}
 	}
-	
 }
-.slider-smallbox {
-	margin: 0;
-	padding: 0; 
-	.smallbox{
-		@media ( min-width: $screen-xs ){
-			border: solid 1px white;
-		}
-		@media ( max-width: $screen-xs ){
+@media (min-width: $screen-sm) {
+	.slider-smallbox {
+		margin: 0;
+		padding: 0; 
+		.smallbox{
 			border: solid 1px lightgray;
+			&:hover{
+				border: solid 1px $linkcolor;
+			}
+			.small-text {
+				display: none;
+			}
 		}
-		&:hover{
-			border: solid 1px $linkcolor;
-		}
-		.small-text {
-			display: none;
-		}
+	}
+}
+@media (max-width: $screen-sm) {
+	.slider-smallbox {
 	}
 }
