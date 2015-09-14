@@ -1,10 +1,10 @@
 <?php
 
-// Write everything inside the quotation 
+// Write everything inside the quotation and rename the file to config.inc.php
 
-define("SITE_ROOT", "/"); 
-define("SITE_TITLE", "yourtitle");
-define("DEFAULT_PAGE", "namethepage");
-define("DB_CONSTRING", "mysql:host=localhost;dbname=dbname");
-define("DB_USER", "username");
-define("DB_PASS", "password");
+define("SITE_ROOT", "/"); // Leave like this if on live site. If using localhost match the name to folder name and add a slash before and after.
+define("SITE_TITLE", "The Title of Your Site");
+define("DEFAULT_PAGE", "namethepage"); // the name of your first page without slashes.
+define("DB_CONSTRING", "mysql:host=localhost;dbname=dbname"); // Replace the second dbname with the db you're using.
+define("DB_USER", "username"); // DB user
+define("DB_PASS", "password"); //DB password
