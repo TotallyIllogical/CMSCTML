@@ -86,13 +86,13 @@ p {
 	background-color: $footer-bg;
 	padding-top: 40px;
 	font-size: 36px;
-	color: white;
+	color: darken($footer-bg, 15%);
 
 	i {
 		padding-right: 25px;
 	}
 	a {
-		color: white;
+		color: darken($footer-bg, 20%);
 		&:hover {
 			color: $linkcolor;
 		}
