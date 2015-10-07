@@ -28,16 +28,30 @@ function getMenu($path) {
 }
 
 function getWords($menuid) {
-		global $db;
-		$sql = "SELECT words.* 
-		   		FROM menuxtext
-        		JOIN words ON words.id = menuxtext.w_id
-        		WHERE menuxtext.m_id = $menuid";
-        $result = $db->query($sql);
-		while($row = $result->fetch(PDO::FETCH_ASSOC)) {
+	global $db;
+	$sql = "SELECT content.* 
+	   		FROM menuxtext
+    		JOIN content ON content.id = menuxtext.w_id
+    		WHERE menuxtext.m_id = $menuid";
+    $result = $db->query($sql);
+	while($row = $result->fetch(PDO::FETCH_ASSOC)) {
 		$text[] = $row;
-		}
+	}
 	return $text;
+}
+
+function getQuicklinks($path) {
+	global $db;
+	$quicklinks = array();
+	$links = array();
+	$sql = "SELECT * FROM quicklinks
+			WHERE placement = '$path'";
+	$result = $db->query($sql);
+	while($row = $result->fetch(PDO::FETCH_ASSOC)) {
+		$links[] = $row;
+	}
+	return $links;
+
 }
 
 function getSociallinks() {

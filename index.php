@@ -12,6 +12,7 @@ $content ="";
 foreach($written['words'] as $word){
 	$content .= dressTemplate('word', $word);
 }
+$quicklinks = getQuicklinks($path);
 $sociallinks = getSociallinks();
 $sociallinks = implode('', $sociallinks);
 
@@ -20,7 +21,7 @@ $page = dressTemplate('page', array(
 									'baseHref'=> SITE_ROOT, 
 									'menu' => $menu, 
 									'content' => $content, 
-									// 'sidemenu' => $sidemenu,
+									'quicklinks' => $quicklinks,
 									'footer' => $sociallinks . '<p>© Emma "Eia" Andersson</p>'));
 respond($page);
 
