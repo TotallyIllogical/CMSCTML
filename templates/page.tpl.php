@@ -27,11 +27,11 @@
             <div class="row">
                     <?php print($content); ?>
                     <div class="col-sm-12">
-                    <?php 
+                    <!--<?php 
                         foreach($quicklinks as $item){
                             print('<a href="' . $item['link'] . '">' . $item['name'] . '</a>');
                         }
-                  ?>
+                  ?>-->
                     </div>
             </div><!--row -->
         </div>><!-- container -->
