@@ -20,7 +20,6 @@ p.navbar-brand {
 	@media (min-width: $screen-sm) {
 		font-size: 40px;
 	}
-	
 	font-weight: bold;
 	margin-bottom: 0;
 }
@@ -94,7 +93,7 @@ p {
 	a {
 		color: darken($footer-bg, 20%);
 		&:hover {
-			color: $linkcolor;
+			color: darken($link-color, 15%);
 		}
 	}
 }
