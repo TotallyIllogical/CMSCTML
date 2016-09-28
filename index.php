@@ -11,7 +11,6 @@ $content ="";
 foreach($written['words'] as $word){
 	$content .= dressTemplate('word', $word);
 }
-$quicklinks = getQuicklinks($path);
 $sociallinks = getSociallinks();
 $sociallinks = implode('', $sociallinks);
 
