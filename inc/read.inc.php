@@ -1,6 +1,5 @@
 <?php
 
-
 function getDataFromPath($path) {
 	$menu = getMenu($path);
 	$data = array('menu' => $menu['items'], 'words' => getWords($menu['selectedId']));
@@ -28,15 +27,15 @@ function getMenu($path) {
 }
 
 function getWords($menuid) {
-		global $db;
-		$sql = "SELECT words.* 
-		   		FROM menuxtext
-        		JOIN words ON words.id = menuxtext.w_id
-        		WHERE menuxtext.m_id = $menuid";
-        $result = $db->query($sql);
-		while($row = $result->fetch(PDO::FETCH_ASSOC)) {
+	global $db;
+	$sql = "SELECT words.* 
+	   		FROM menuxtext
+    		JOIN words ON words.id = menuxtext.w_id
+    		WHERE menuxtext.m_id = $menuid";
+    $result = $db->query($sql);
+	while($row = $result->fetch(PDO::FETCH_ASSOC)) {
 		$text[] = $row;
-		}
+	}
 	return $text;
 }
 

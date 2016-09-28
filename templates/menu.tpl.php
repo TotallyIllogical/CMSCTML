@@ -11,7 +11,7 @@
                 <p class="navbar-brand">Code To My Life</p>
             </div>
 
-            <!-- Collect the nav links, forms, and other content for toggling -->
+            <?php //Collect the nav links, forms, and other content for toggling ?>
             <div class="collapse navbar-collapse">
                 <ul class="nav navbar-nav navbar-right">
                   <?php 
@@ -20,6 +20,6 @@
                     }
                   ?>
                 </ul>
-            </div><!-- /.navbar-collapse -->
-        </div><!-- /.container-fluid -->
+            </div><?php //navbar-collapse ?>
+        </div><?php //container-fluid ?>
     </nav>

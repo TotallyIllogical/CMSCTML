@@ -1,13 +1,13 @@
 <?php
 
 function dressTemplate($templateName, array $data = array()){
-  extract($data);
+  	extract($data);
 
-  ob_start();
+  	ob_start();
   
-  require('templates/' . $templateName . '.tpl.php');
+  	require('templates/' . $templateName . '.tpl.php');
   
-  $htmlString = ob_get_clean();
+  	$htmlString = ob_get_clean();
   
-  return $htmlString;
+  	return $htmlString;
 }

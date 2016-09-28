@@ -1,11 +1,12 @@
 <?php 
 
-$files = array(	"config.inc.php",
-				"db.inc.php",
-				"read.inc.php",
-				"request.inc.php",
-				"templating.inc.php");
-
+$files = array(	
+	"config.inc.php",
+	"db.inc.php",
+	"read.inc.php",
+	"request.inc.php",
+	"templating.inc.php"
+);
 
 foreach ($files as $file){
 	include_once $file;
