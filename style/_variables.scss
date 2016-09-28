@@ -15,7 +15,7 @@ $sidebar-hover-bg: #B393D6;
 $sidebar-border: #A77BD6;
 
 $footer-bg: #c7c8db;
-// $footer-img: url("../img/binary.png");
+$footer-img: url("../img/binary.png");
 
 @font-face {
 	font-family: "Ubuntu";
@@ -30,7 +30,6 @@ $navbar-default-link-hover-color: $navbar-text;
 $navbar-default-link-hover-bg: darken($navbar-default-bg, 10%);
 $navbar-default-link-active-color: $navbar-active-text;
 $navbar-default-link-active-bg: $navbar-active-bg;
-
 
 $navbar-default-brand-color: $navbar-text;
 $navbar-default-brand-hover-color: $navbar-text;

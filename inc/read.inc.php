@@ -28,9 +28,9 @@ function getMenu($path) {
 
 function getWords($menuid) {
 	global $db;
-	$sql = "SELECT words.* 
+	$sql = "SELECT content.* 
 	   		FROM menuxtext
-    		JOIN words ON words.id = menuxtext.w_id
+    		JOIN content ON content.id = menuxtext.w_id
     		WHERE menuxtext.m_id = $menuid";
     $result = $db->query($sql);
 	while($row = $result->fetch(PDO::FETCH_ASSOC)) {

@@ -8,7 +8,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <p class="navbar-brand">Code To My Life</p>
+                <p class="navbar-brand"><?php echo SITE_TITLE; ?></p>
             </div>
 
             <?php //Collect the nav links, forms, and other content for toggling ?>

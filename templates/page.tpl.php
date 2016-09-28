@@ -28,7 +28,6 @@
                 <?php print($content); ?> 
             </div><?php //row ?>
         </div><?php //container ?>
-
         <div class="footer navbar-fixed-bottom">
             <div class="container">
                 <div class="row">

@@ -20,7 +20,6 @@ p.navbar-brand {
 	@media (min-width: $screen-sm) {
 		font-size: 40px;
 	}
-	
 	font-weight: bold;
 	margin-bottom: 0;
 }
@@ -42,6 +41,9 @@ h1.toptitle {
 	margin-top: 0px;
 	font-weight: bold;
 	text-transform: uppercase;
+}
+h5 {
+	font-weight: bold !important;
 }
 html {
 	font-size: 16px;
@@ -79,19 +81,19 @@ p {
 // Footer
 .footer {
 	min-height: 150px;
-	// background-image: $footer-img;
+	background-image: $footer-img;
 	background-color: $footer-bg;
 	padding-top: 40px;
 	font-size: 36px;
-	color: white;
+	color: darken($footer-bg, 15%);
 
 	i {
 		padding-right: 25px;
 	}
 	a {
-		color: white;
+		color: darken($footer-bg, 20%);
 		&:hover {
-			color: $linkcolor;
+			color: darken($link-color, 15%);
 		}
 	}
 }
